@@ -1,0 +1,64 @@
+body {
+  font-family: Lato, Open Sans, Arial;
+  color: #454851;
+  font-size: 16px;
+  margin: 1vh;
+}
+
+#map {
+  height: 98vh;
+  border-radius: 5px;
+}
+.leaflet-popup .leaflet-popup-content {
+  width: 500px;
+}
+.leaflet-popup-content img {
+  max-width: 100%;
+}
+
+#coords { 
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+}
+#coordstext { 
+  background-color: brown;
+  color: white;
+  border-radius: 5px;
+  position: relative;
+  left: -50%;
+  z-index: 1001;
+  font-family: monospace;
+  font-size: 24px;
+  padding: 1px 5px 1px 5px;
+}
+
+#sidebar {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 0;
+  transition: 0.5s;
+  background-color: white;
+  border-color: black;
+  border-width: 2px;
+  overflow-x: hidden;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+#sidebar a {
+  text-decoration: none;
+  color: blue;
+}
+.closebtn {
+  color: black!important;
+  position: absolute;
+  top: 0;
+  left: 5px;
+  font-size: 36px;
+  margin-right: 50px;
+  text-decoration: none;
+}
