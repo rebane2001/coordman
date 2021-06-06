@@ -7,6 +7,7 @@ Copy all journeymap files to new location and generate different zoom levels
 import math
 import multiprocessing as mp
 import os
+import re
 import shutil
 
 from PIL import Image
@@ -43,6 +44,9 @@ def generateMap(source, destination, dimension):
 def mergeLayers(tuple_in):
     """ Merges images by overlaying """
     file, jmdest, jmpath = tuple_in
+    # Check if filename is valid
+    if not re.match(r"^[\-0-9]*,[\-0-9]*.png$", file):
+        return 0
     if os.path.exists(f"{jmdest}/{file}"):
         try:
             srcim = Image.open(f"{jmpath}/{file}")
