@@ -9,6 +9,7 @@ import multiprocessing as mp
 import os
 import re
 import shutil
+import sys
 
 from PIL import Image
 from tqdm import tqdm
@@ -88,12 +89,15 @@ def generateZooms(folder, level):
             pbar.refresh()
 
 
-def main():
+def main(argu):
     print("Journeymap to Coordman tiles converter")
     print("Note: This program may take a while to run")
     print("Please insert the full path to your Journeymap images folder "
           "(eg C:\\Users\\Popstonia\\AppData\\Roaming\\.minecraft\\journeymap\\data\\mp\\2b2t\\):")
-    jmpath = input()
+    if len(argu) == 2:
+        jmpath = argu[1]
+    else:
+        jmpath = input()
 
     if os.path.isdir("tiles/"):
         print("clearing tiles folder")
@@ -111,4 +115,4 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    main(sys.argv)
