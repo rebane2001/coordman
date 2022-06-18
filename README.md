@@ -18,10 +18,11 @@
 # How to use
 1. Download this project somewhere on your computer.
 2. Make sure the code you downloaded is safe and doesn't send coords to a weird server hosted in Narva.
-3. Install Python3 and Pillow (`pip3 install Pillow`) if you don't have them.
-4. Run `generateTiles.py` to generate the map from your JourneyMap data.
-5. Copy [`example-user-data.js`](example-user-data.js) to `user-data.js` and edit it with your own data to add waypoints.
-6. Run `coordman.html` in your web browser.
+3. Install Python3
+4. Install Pillow (`pip3 install Pillow`) and TQDM (`pip install tqdm`)
+5. Run `generateTiles.py` or `generateTiles.py [pathToFolderWithJMFiles]`to generate the map from your JourneyMap data.
+6. Copy [`example-user-data.js`](example-user-data.js) to `user-data.js` and edit it with your own data to add waypoints.
+7. Run `coordman.html` in your web browser.
 
 ## Example `user-data.js`
 ```js
